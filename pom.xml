@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.github.matthewbretten</groupId>
     <artifactId>example-json-data-model</artifactId>
-    <version>1.0.11</version>
+    <version>1.0.12-SNAPSHOT</version>
     <packaging>jar</packaging>
     <name>example-json-data-model</name>
     <description>Example json data model project</description>
@@ -12,7 +12,7 @@
         <url>https://github.com/matthewbretten/example-json-data-model</url>
         <connection>scm:git:https://github.com/matthewbretten/example-json-data-model.git</connection>
         <developerConnection>scm:git:https://github.com/matthewbretten/example-json-data-model.git</developerConnection>
-        <tag>1.0.11</tag>
+        <tag>1.0.8</tag>
     </scm>
 
     <properties>
