@@ -1,0 +1,88 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Basket schema",
+  "description": "Basket",
+  "type": "object",
+  "properties": {
+    "customer": {
+      "$ref": "#/definitions/customer"
+    },
+    "totalPrice": {
+      "#ref": "#/definitions/totalPrice"
+    },
+    "items": {
+      "#ref": "#/definitions/items"
+    },
+    "dateCreated": {
+      "#ref": "#/definitions/dateCreated"
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "customer",
+    "totalPrice",
+    "items",
+    "dateCreated"
+  ],
+  "definitions": {
+    "customer": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 5,
+          "maxLength": 20
+        },
+        "age": {
+          "type": "integer"
+        },
+        "countryCode": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 2
+        }
+      },
+      "required": [
+        "name",
+        "age",
+        "countryCode"
+      ],
+      "additionalProperties": false
+    },
+    "totalPrice": {
+      "type": "integer"
+    },
+    "items": {
+      "description": "A list of items",
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 999,
+      "items": {
+        "#ref": "#/definitions/item"
+      }
+    },
+    "item": {
+      "type": "object",
+      "properties": {
+        "basketItemId": {
+          "type": "integer"
+        },
+        "description": {
+          "type": "string",
+          "minLength": 5,
+          "maxLength": 20
+        },
+        "price": {
+          "type": "integer"
+        }
+      }
+    },
+    "dateCreated": {
+      "description": "The timestamp in ISO8601 UTC format: YYYY-MM-DDThh:mm:ss.sssZ",
+      "type": "string",
+      "minLength": 24,
+      "maxLength": 24,
+      "pattern": "[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\\.[0-9]{3}Z"
+    }
+  }
+}
