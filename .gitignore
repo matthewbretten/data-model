@@ -29,3 +29,5 @@ target/
 *.ipr
 
 release.properties
+
+pom.xml.releaseBackup
