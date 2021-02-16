@@ -27,3 +27,5 @@ target/
 *.iws
 *.iml
 *.ipr
+
+release.properties

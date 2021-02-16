@@ -8,6 +8,13 @@
     <name>example-json-data-model</name>
     <description>Example json data model project</description>
 
+    <scm>
+        <url>https://github.com/matthewbretten/example-json-data-model</url>
+        <connection>scm:git:ssh://git@github.com:matthewbretten/example-json-data-model.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com:matthewbretten/example-json-data-model.git</developerConnection>
+        <tag>HEAD</tag>
+    </scm>
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
